@@ -40,7 +40,7 @@ export const en: ContentDictionary = {
       label: 'PLATFORM LAB',
       title: 'Kubernetes & Platform Engineering',
       items: [
-        { text: 'Operating Seronz Lab (homelab K3s)' },
+        { text: 'Operating Vesper Lab (homelab K3s)' },
         { text: 'Kubernetes RBAC & access control' },
         { text: 'CKAD — In Progress', pill: true },
         { text: 'Considering CKA next' },

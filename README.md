@@ -135,7 +135,7 @@ upgrade to Node 22.13+ or 24.
 
 ## Deploying to Vercel
 
-The site is also deployed to Vercel (project `seronzs-projects/engineering-portofolio`),
+The site is also deployed to Vercel (project `x-vespers-projects/engineering-portofolio`),
 connected to this GitHub repository so pushes to `main` deploy to production.
 
 - `vercel.json` sets the Vite framework preset, the `dist` output directory, and

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react
 import { defaultLanguage, getContent, isLanguage, type Language } from '@/content'
 import { LanguageContext } from './context'
 
-const STORAGE_KEY = 'seronz-language'
+const STORAGE_KEY = 'vesper-language'
 
 /**
  * Picks the initial language: a previously chosen one if present, otherwise the

@@ -39,7 +39,7 @@ export const id: ContentDictionary = {
       label: 'PLATFORM LAB',
       title: 'Kubernetes & Rekayasa Platform',
       items: [
-        { text: 'Mengoperasikan Seronz Lab (homelab K3s)' },
+        { text: 'Mengoperasikan Vesper Lab (homelab K3s)' },
         { text: 'RBAC & kontrol akses Kubernetes' },
         { text: 'CKAD — Sedang Dikerjakan', pill: true },
         { text: 'Mempertimbangkan CKA berikutnya' },

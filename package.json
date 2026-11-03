@@ -1,9 +1,9 @@
 {
-  "name": "seronz-engineering-portfolio",
+  "name": "vesper-engineering-portfolio",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "SERONZ / SYSTEMS ENGINEERING - engineering portfolio for a Platform / Site Reliability Engineer.",
+  "description": "VESPER / SYSTEMS ENGINEERING - engineering portfolio for a Platform / Site Reliability Engineer.",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && node scripts/prerender.mjs",
