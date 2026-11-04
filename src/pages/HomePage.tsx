@@ -85,18 +85,28 @@ export function HomePage() {
       <Section id="contact" label={ui.contactEyebrow} title={ui.contactTitle}>
         {content.contact.length > 0 ? (
           <ul className={styles.contact}>
-            {content.contact.map((link) => (
-              <li key={link.href} className={styles.contactItem}>
-                <a
-                  href={link.href}
-                  {...(link.href.startsWith('http')
-                    ? { target: '_blank', rel: 'noreferrer noopener' }
-                    : {})}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            {content.contact.map((link) => {
+              const Icon =
+                link.label === 'GitHub'
+                  ? Github
+                  : link.label === 'Email'
+                    ? Mail
+                    : null
+              return (
+                <li key={link.href} className={styles.contactItem}>
+                  <a
+                    href={link.href}
+                    {...(link.href.startsWith('http')
+                      ? { target: '_blank', rel: 'noreferrer noopener' }
+                      : {})}
+                    className={styles.contactLink}
+                  >
+                    {Icon && <Icon className={styles.contactIcon} />}
+                    {link.label}
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         ) : (
           <p className={styles.contactFallback}>{ui.contactFallback}</p>
