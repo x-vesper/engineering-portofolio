@@ -7,6 +7,13 @@
   transition: transform 0.15s ease-out;
 }
 
+@media (max-width: 768px) {
+  .fisherContainer {
+    transform: scale(0.75);
+    transform-origin: top left;
+  }
+}
+
 .fisherSvg {
   filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
   animation: floatRod 6s ease-in-out infinite;
