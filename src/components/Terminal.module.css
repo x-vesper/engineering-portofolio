@@ -1,6 +1,6 @@
 .terminal {
   margin-top: var(--space-3);
-  max-width: 36rem;
+  max-width: 38rem;
   background-color: var(--color-surface);
   border: var(--border-hairline);
   border-radius: var(--radius);
@@ -75,15 +75,69 @@
 
 .body {
   padding: 0.75rem 1rem;
+  max-height: 14rem;
+  overflow-y: auto;
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
   font-size: var(--text-sm);
 }
 
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.historyItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.line {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .prompt {
   color: var(--color-accent-strong);
+  user-select: none;
 }
 
 .command {
   color: var(--color-text);
 }
+
+.output {
+  color: var(--color-text-secondary);
+  white-space: pre-wrap;
+  padding-left: 1.2rem;
+  font-size: 0.85rem;
+}
+
+.neofetch {
+  font-family: var(--font-mono);
+  line-height: 1.4;
+}
+
+.nfAccent {
+  color: var(--color-accent);
+}
+
+.inputRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  width: 100%;
+}
+
