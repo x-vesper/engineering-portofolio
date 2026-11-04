@@ -15,7 +15,6 @@ export function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <Link to="/" className={styles.identity}>
-          <img src={`${import.meta.env.BASE_URL}vesper-logo.jpg`} alt="Vesper Logo" className={styles.logo} />
           <span className={styles.prompt} aria-hidden="true">
             ./
           </span>
