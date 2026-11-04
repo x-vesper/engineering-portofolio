@@ -10,30 +10,7 @@ interface HistoryItem {
 export function TerminalSnippet() {
   const [copied, setCopied] = useState(false)
   const [input, setInput] = useState('')
-  const [history, setHistory] = useState<HistoryItem[]>([
-    {
-      command: 'neofetch',
-      output: (
-        <div className={styles.neofetch}>
-          <span className={styles.nfAccent}>   /\\   </span> irza@vesper-systems<br/>
-          <span className={styles.nfAccent}>  /  \\  </span> -------------------<br/>
-          <span className={styles.nfAccent}> /\\ /\\ \\ </span> OS: Linux x86_64<br/>
-          <span className={styles.nfAccent}>/      \\ </span> Host: Platform Engineering<br/>
-          <span className={styles.nfAccent}>        </span> Uptime: 99.99% uptime<br/>
-          <span className={styles.nfAccent}>        </span> Shell: zsh
-        </div>
-      )
-    },
-    {
-      command: 'whoami',
-      output: 'irza (Platform & Systems Engineer)'
-    },
-    {
-      command: 'help',
-      output: 'Available commands: neofetch, whoami, skills, clear, help'
-    }
-  ])
-
+  const [history, setHistory] = useState<HistoryItem[]>([])
   const bottomRef = useRef<HTMLDivElement>(null)
 
   const handleCopy = () => {
@@ -93,7 +70,7 @@ export function TerminalSnippet() {
         </div>
         <div className={styles.title}>
           <TerminalIcon className={styles.icon} />
-          <span>zsh — vesper@systems (interactive)</span>
+          <span>zsh — vesper@systems</span>
         </div>
         <button onClick={handleCopy} className={styles.copyBtn} aria-label="Copy ssh command">
           {copied ? <Check size={14} /> : <Copy size={14} />}
