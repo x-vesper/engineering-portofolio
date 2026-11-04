@@ -17,7 +17,7 @@ export interface ContactLink {
   href: string
 }
 
-/** One bullet inside a capability section. `pill` renders it as a green badge. */
+/** One bullet inside a capability section. `pill` renders it as a badge. */
 export interface SectionItem {
   text: string
   pill?: boolean

@@ -11,7 +11,7 @@ interface SectionProps {
 }
 
 /**
- * A titled content section. The label renders as a green pill — a small,
+ * A titled content section. The label renders as a pill — a small,
  * monospace marker that gives the page an editorial/terminal rhythm without
  * decorative noise. An optional icon sits inside the pill.
  */
