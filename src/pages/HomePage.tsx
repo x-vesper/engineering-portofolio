@@ -3,6 +3,7 @@ import { Activity, Boxes, Github, Mail, Network } from 'lucide-react'
 import { Page } from '@/components/Page'
 import { Section } from '@/components/Section'
 import { TerminalSnippet } from '@/components/TerminalSnippet'
+import { FisherAnimation } from '@/components/FisherAnimation'
 import { useContent } from '@/i18n/context'
 import styles from './HomePage.module.css'
 
@@ -22,6 +23,7 @@ export function HomePage() {
 
   return (
     <Page>
+      <FisherAnimation />
       <section className={styles.hero} aria-labelledby="hero-heading">
         <p className="mono-label">{content.identity}</p>
         <h1 id="hero-heading" className={styles.headline}>

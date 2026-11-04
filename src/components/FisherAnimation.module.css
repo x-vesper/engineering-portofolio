@@ -1,0 +1,48 @@
+.fisherContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
+  transition: transform 0.15s ease-out;
+}
+
+.fisherSvg {
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
+  animation: floatRod 6s ease-in-out infinite;
+}
+
+.lineAnimation {
+  animation: rippleLine 3s ease-in-out infinite;
+}
+
+.bobber {
+  animation: bobbing 2s ease-in-out infinite;
+}
+
+@keyframes floatRod {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-2deg) translateY(2px);
+  }
+}
+
+@keyframes rippleLine {
+  0%, 100% {
+    d: path("M110 90 Q 125 110, 130 135");
+  }
+  50% {
+    d: path("M110 90 Q 120 115, 125 138");
+  }
+}
+
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px) scale(1.1);
+  }
+}
