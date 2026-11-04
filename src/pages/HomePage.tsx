@@ -2,6 +2,7 @@ import type { LucideIcon } from 'lucide-react'
 import { Activity, Boxes, Github, Mail, Network } from 'lucide-react'
 import { Page } from '@/components/Page'
 import { Section } from '@/components/Section'
+import { TerminalSnippet } from '@/components/TerminalSnippet'
 import { useContent } from '@/i18n/context'
 import styles from './HomePage.module.css'
 
@@ -34,6 +35,7 @@ export function HomePage() {
             </li>
           ))}
         </ul>
+        <TerminalSnippet />
         {github || email ? (
           <div className={styles.icons}>
             {github ? (
