@@ -5,8 +5,7 @@
  * scale. Components should reference these variables instead of hard-coding
  * values, so the palette can be tuned in one place.
  *
- * Palette: pure black background, white text, a single green accent used for
- * labels/pills. Dark mode only — there is no light theme.
+ * Palette: pure black background, white text, a single gradient accent (#8B5CF6 → #B85C5C) used for labels/pills. Dark mode only — there is no light theme.
  */
 :root {
   color-scheme: dark;
@@ -23,18 +22,22 @@
   --color-text-secondary: #b4b4b4;
   --color-text-muted: #757575;
 
-  /* Accent — terminal green, used for pills and inline links */
-  --color-accent: #79c98a;
-  --color-accent-strong: #b7ecc3;
-  --color-accent-dim: #12291a;
+  /* Accent — gradient #8B5CF6 → #B85C5C, used for pills and inline links */
+  --color-accent: #8B5CF6;
+  --color-accent-strong: #B85C5C;
+  --color-accent-dim: #26162b;
+  --gradient-dusk: linear-gradient(135deg, #8B5CF6 0%, #B85C5C 100%);
 
   /* Typography */
   --font-sans:
-    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial,
     sans-serif;
   --font-mono:
-    ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Cascadia Code', Menlo, Consolas,
-    'Liberation Mono', monospace;
+    ui-monospace, 'SFMono-Regular', 'SF Mono', Menlo, Consolas, 'Liberation Mono',
+    monospace;
+  --font-display:
+    'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia,
+    'Times New Roman', serif;
 
   /* Fluid type scale */
   --text-xs: 0.75rem;
@@ -51,10 +54,10 @@
   --space-3: 0.75rem;
   --space-4: 1rem;
   --space-5: 1.5rem;
-  --space-6: 2rem;
-  --space-7: 3rem;
-  --space-8: 4.5rem;
-  --space-9: 6.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 6.5rem;
 
   /* Layout */
   --content-width: 60rem;

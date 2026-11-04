@@ -21,6 +21,20 @@ body {
   line-height: 1.65;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.07) 0%, rgba(184, 92, 92, 0.03) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 h1,
@@ -85,14 +99,16 @@ button {
   color: var(--color-text-muted);
 }
 
-/* Utility: green pill label, used for section eyebrows and status badges */
+/* Utility: gradient pill label, used for section eyebrows and status badges */
 .pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5ch;
   align-self: flex-start;
   padding: 0.2rem 0.7rem;
-  border: 1px solid var(--color-accent);
+  border: 1px solid transparent;
+  background: linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
+              var(--gradient-dusk) border-box;
   border-radius: var(--radius-pill);
   background-color: var(--color-accent-dim);
   color: var(--color-accent-strong);
